@@ -5,9 +5,10 @@ import * as api from "../api/users";
 function* getUsers() {
   try {
     const result = yield call(api.getUsers);
+    console.log("result", result);
     yield put(
       actions.getUsersSuccess({
-        items: result.data.users,
+        items: result.data,
       })
     );
   } catch (err) {}

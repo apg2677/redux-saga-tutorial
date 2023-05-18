@@ -10,7 +10,7 @@ import createSagaMiddleware from "redux-saga";
 import rootSaga from "./sagas";
 import "bootstrap/dist/css/bootstrap.min.css";
 axios.defaults.withCredentials = false;
-axios.defaults.baseURL = "https://dummyjson.com";
+axios.defaults.baseURL = "http://localhost:3001";
 
 const sagaMiddleware = createSagaMiddleware();
 
